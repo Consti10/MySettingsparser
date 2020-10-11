@@ -12,15 +12,19 @@ public class Main {
     private static final String DIRECTORY_DEVELOPMENT_FOLDER ="C:\\Users\\geier\\Desktop\\FPV_VR\\Development\\";
 
     private static final String DIR_FPV_VR= DIRECTORY_DEVELOPMENT_FOLDER + "FPV_VR_OS\\app\\src\\main\\";
+    //
     private static final String DIR_TELEMETRYCORE= DIRECTORY_DEVELOPMENT_FOLDER +"LiveVideo10ms\\TelemetryCore\\src\\main\\";
-    private static final String DIR_RENDERINGXCORE= DIRECTORY_DEVELOPMENT_FOLDER +"RenderingX\\RenderingXCore\\src\\main\\";
     private static final String DIR_VIDEOCORE= DIRECTORY_DEVELOPMENT_FOLDER +"LiveVideo10ms\\VideoCore\\src\\main\\";
+    //
+    private static final String DIR_RENDERINGXCORE= DIRECTORY_DEVELOPMENT_FOLDER +"RenderingX\\RenderingXCore\\src\\main\\";
 
     public static void main(String[] args){
-        //convert(DIR_TELEMETRYCORE+"res\\values\\pref_telemetry_ids.xml",DIR_TELEMETRYCORE+"cpp\\Telemetry","IDT");
-        //convert(DIR_FPV_VR+"res\\values\\pref_osd_ids.xml", DIR_FPV_VR+"cpp\\Scene\\OSD\\Settings","IDOSD");
-        //convert(DIR_FPV_VR+"res\\values\\pref_vr_ids.xml", DIR_FPV_VR+"cpp\\VRSettings","IDVR");
-        //convert(DIR_VIDEOCORE+"res\\values\\pref_video_ids.xml",DIR_VIDEOCORE+"cpp","IDV");
+        convert(DIR_TELEMETRYCORE+"res\\values\\pref_telemetry_ids.xml",DIR_TELEMETRYCORE+"cpp","IDT");
+        convert(DIR_VIDEOCORE+"res\\values\\pref_video_ids.xml",DIR_VIDEOCORE+"cpp","IDV");
+        //
+        convert(DIR_RENDERINGXCORE+"res\\values\\pref_vr_ids.xml",DIR_RENDERINGXCORE+"cpp\\VRSettings","IDVR");
+        //
+        convert(DIR_FPV_VR+"res\\values\\pref_osd_ids.xml", DIR_FPV_VR+"cpp\\Scene\\OSD\\Settings","IDOSD");
     }
 
     private static void convert(final String pathToSource,final String pathToDestination,final String destinationFileName){
@@ -36,7 +40,7 @@ public class Main {
         String s1= ClassTextGenerator.generateIDClassJAVA(tuplesList,destinationFileName);
         String s2= ClassTextGenerator.generateIDClassCPP(tuplesList,destinationFileName);
 
-        System.out.println(s1);
+        //System.out.println(s1);
         System.out.println(s2);
 
         writeStringToFile(s2,pathToDestination,destinationFileName+".hpp");
