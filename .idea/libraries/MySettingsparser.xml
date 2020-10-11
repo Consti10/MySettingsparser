@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MySettingsparser">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/MySettingsparser_jar/MySettingsparser.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
