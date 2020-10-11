@@ -1,7 +1,7 @@
 
 import java.util.ArrayList;
 
-public class ClassGenerator {
+public class ClassTextGenerator {
 
     /**
      * Create the text for a JAVA class that contains key-value pairs as public members

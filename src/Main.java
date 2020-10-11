@@ -33,8 +33,8 @@ public class Main {
         ArrayList<Pair<String,String>> tuplesList=Parser.parse(fileAsString);
         Parser.checkForEquality(tuplesList);
 
-        String s1= ClassGenerator.generateIDClassJAVA(tuplesList,destinationFileName);
-        String s2= ClassGenerator.generateIDClassCPP(tuplesList,destinationFileName);
+        String s1= ClassTextGenerator.generateIDClassJAVA(tuplesList,destinationFileName);
+        String s2= ClassTextGenerator.generateIDClassCPP(tuplesList,destinationFileName);
 
         System.out.println(s1);
         System.out.println(s2);
