@@ -3,7 +3,9 @@ import java.util.ArrayList;
 
 public class ClassGenerator {
 
-
+    /**
+     * Create the text for a JAVA class that contains key-value pairs as public members
+     */
     public static String generateIDClassJAVA(final ArrayList<Pair<String,String>> input, final String className){
         StringBuilder resultJAVA= new StringBuilder();
         resultJAVA.append("package constantin.fpv_vr.Settings;\n\n");
@@ -21,7 +23,9 @@ public class ClassGenerator {
         return resultJAVA.toString();
     }
 
-
+    /**
+     * Create the text for a CPP class that contains key-value pairs as public members
+     */
     public static String generateIDClassCPP(ArrayList<Pair<String,String>> input,final String className){
         final String INCLUDE_GUARD="CONSTI_10_100_"+className;
         StringBuilder resultCPP= new StringBuilder();
